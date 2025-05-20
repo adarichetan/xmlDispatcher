@@ -8,6 +8,7 @@
   <name>SpringXmlDispatcher Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -28,7 +29,6 @@
         <version>6.1.14</version>
       </dependency>
 
-
       <!-- Servlet API (provided by container like Tomcat) -->
       <dependency>
         <groupId>javax.servlet</groupId>
@@ -37,12 +37,12 @@
         <scope>provided</scope>
       </dependency>
 
- <!--   <dependency>
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>2.13.4.2</version> &lt;!&ndash; ya latest &ndash;&gt;
+        <artifactId>jackson-databind</artifactId>
+      <version>2.19.0</version>
     </dependency>
--->
     <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
  <!--   <dependency>
       <groupId>jakarta.servlet.jsp</groupId>

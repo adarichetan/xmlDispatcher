@@ -22,7 +22,8 @@ public class ViewController {
     }
 
     @GetMapping("/asf")
-    public String hellowf() {
+    public String hellowf(Model model) {
+        model.addAttribute("num3", "Shubham");
         return "test";
     }
 /*
@@ -46,16 +47,27 @@ public class ViewController {
         return "index";
     }
 
-
     @GetMapping("/{id}")
     public String getPerson(@PathVariable("id") Long id) {
         return "var";
     }
+
+
+
 
 /*    @PostMapping("/person")
     @ResponseBody
     public String getPersonDetails(@RequestBody Person a) {
         return "Received: " + a.getName() + ", Age: " + a.getAge();
     }*/
+
+    @PostMapping(path = "/path")
+    @ResponseBody
+    public Person getRequest(@RequestBody Person person) {
+        System.out.println(person);
+        return new Person(person.getAge(),person.getName());
+    }
+
+
 
 }
